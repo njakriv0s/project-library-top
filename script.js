@@ -65,6 +65,30 @@ function createBookCard(book) {
     bookPages.classList.add("card-book-text")
     bookPages.textContent = `Pages: ${book.pages}`
     cardBack.appendChild(bookPages);
+
+    const readFormContainer = document.createElement("div");
+    readFormContainer.classList.add("read-form-container");
+    cardBack.appendChild(readFormContainer);
+
+    const labelReadForm = document.createElement("label");
+    labelReadForm.classList.add("card-back-text");
+    labelReadForm.textContent = "STATUS : ";
+    readFormContainer.appendChild(labelReadForm);
+
+    const checkboxReadForm = document.createElement("input");
+    checkboxReadForm.type = "checkbox";
+    checkboxReadForm.classList.add("checkbox-read-form");
+    checkboxReadForm.checked = book.read;
+    labelReadForm.appendChild(checkboxReadForm);
+
+    checkboxReadForm.addEventListener("change", (e) => {
+        book.read = checkboxReadForm.checked;
+        console.log(book.read);
+    })
+
+    const spanReadForm = document.createElement("span");
+    spanReadForm.classList.add("span-read-form");
+    labelReadForm.appendChild(spanReadForm);
     
     const bookID = document.createElement("p");
     bookID.classList.add("card-book-text")

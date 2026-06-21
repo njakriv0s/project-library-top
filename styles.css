@@ -183,8 +183,8 @@ label {
 
 .card-container {
     background-color: transparent;
-    height: 15em;
-    width: 11em;
+    height: 18em;
+    width: 13em;
     perspective: 1000px;
 }
 
@@ -226,8 +226,9 @@ label {
     margin-right: 1em;
 }
 
-
 .card-back {
+    display: flex;
+    flex-direction: column;
     background-color: var(--color-book-page);
     color: #6B4226;
     transform: rotateY(180deg);
@@ -236,10 +237,49 @@ label {
 
 }
 
-.book-author {
+.card-back.text {
     font: var(--font-size-3);
     font-size: 1.5em;
     text-align: center;
+}
+
+/* CARD CHECKBOX */
+.read-form-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-read-form {
+    opacity: 0;
+}
+
+.span-read-form {
+    display: inline-block;
+    width: 3em;
+    height: 1.6em;
+    border-radius: 999px;
+    background-color: var(--color-book-cover);
+    position: relative;
+}
+
+.span-read-form::before {
+    content: "";
+    height: 1.3em;
+    width: 1.3em;
+    border-radius: 50px;
+    background-color: white;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: 0.2s;
+}
+
+.checkbox-read-form:checked + .span-read-form {
+    background-color: var(--color-card);
+}
+
+.checkbox-read-form:checked + .span-read-form::before {
+    transform: translateX(1.2em);
 }
 
 #delete-book {
@@ -250,23 +290,16 @@ label {
     border: 0;
     width: 8em;
     height: 2em;
-    margin: 2em;
+    margin: 1em;
     align-self: center;
     border-radius: 5px;
 }
 
-
-
-
 #delete-book:hover {
     cursor: pointer;
     background-color: var(--color-book-cover-hover);
-}
+}   
 
 #delete-book:active {
     transform: translateY(2px);
 }
-
-
-
-
