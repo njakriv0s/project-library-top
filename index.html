@@ -3,40 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library Project - TOP</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
- 
+
+    <!-- HEADER -->
     <div class="header-container">
         <h1 class="header">Nick's Library</h1>
         <button class="button" id="open">+ Add Book</button>
     </div>
 
+    <!-- MODAL -->
     <div class="modal-container" id="modal-container">
         <div class="modal">
             <form action="content/" method="post" id="book-form">
                 <div class="form-input">
-                    <label for="author">Author :</label>
+                    <label for="author">AUTHOR :</label>
                     <input class="text-input" type="text" name="input-author" id="author" placeholder="Write the author here" required>
                 </div>
                 <div class="form-input">
-                    <label for="title">Title :</label>
+                    <label for="title">TITLE :</label>
                     <input class="text-input" type="text" name="input-title" id="title" placeholder="Write the title here" required>
                 </div>
                 <div class="form-input">
-                    <label for="pages">No of pages :</label>
+                    <label for="pages">No. OF PAGES :</label>
                     <input class="text-input" type="number" name="input-pages" id="pages" placeholder="Write the number of pages here" required>
                 </div>
                 <div>
-                    <label for="read">Have you read it? :</label>
+                    <label for="read">HAVE YOU READ IT? :</label>
                     <input type="checkbox" name="input-read" id="read">
                 </div>
                 <button id="modal-submit" type="submit">Submit</button>
             </form>
         </div>
     </div>
+
+    <!-- GRID -->
+
+    <div class="wrapper">
+        <div class="grid-container">
+        
+        </div>
+    </div>
+    
+
 
 
 
