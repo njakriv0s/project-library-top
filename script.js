@@ -18,6 +18,7 @@ const title = document.getElementById("title");
 const pages = document.getElementById("pages");
 const read = document.getElementById("read");
 const grid = document.querySelector(".grid-container");
+const closeModalButton= document.getElementById("close-modal-button");
 
 
 
@@ -104,6 +105,10 @@ bookForm.addEventListener("submit", (e) => {
     pages.value = "";
     modalContainer.classList.remove("show");
     
+})
+
+closeModalButton.addEventListener("click", (e) => {
+    modalContainer.classList.remove("show");
 })
 
 console.log(myLibrary);

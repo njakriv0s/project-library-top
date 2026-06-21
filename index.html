@@ -19,6 +19,8 @@
     <!-- MODAL -->
     <div class="modal-container" id="modal-container">
         <div class="modal">
+            <img id="close-modal-button" src="content/icons8-close-window-50.png" alt="">
+            <h1 class="modal-title">Add Book</h1>
             <form action="content/" method="post" id="book-form">
                 <div class="form-input">
                     <label for="author">AUTHOR :</label>
@@ -32,12 +34,12 @@
                     <label for="pages">No. OF PAGES :</label>
                     <input class="text-input" type="number" name="input-pages" id="pages" placeholder="Write the number of pages here" required>
                 </div>
-                <div>
-                    <label for="read">HAVE YOU READ IT? :</label>
+                <div class="checkbox-input">
+                    <label for="read">HAVE YOU READ IT? : </label>
                     <input type="checkbox" name="input-read" id="read">
                 </div>
-                <button id="modal-submit" type="submit">Submit</button>
             </form>
+            <button id="modal-submit" form="book-form" type="submit">Submit</button>
         </div>
     </div>
 

@@ -8,6 +8,7 @@
     --color-accent-hover: #c08b52;
     --color-border: #e3e0db;
     --color-book-cover: #6B4226;
+    --color-book-cover-hover: #8f532b;
     --color-card: #e88310;
     --color-book-page: #f2dcb1;
     --color-card-shadow: rgba(43, 45, 66, 0.08);
@@ -75,6 +76,10 @@ body {
     opacity: 1;
     pointer-events: auto;
 }
+.modal-title {
+    display: flex;
+    justify-content: center;
+}
 
 .modal {
     display: flex;
@@ -85,12 +90,27 @@ body {
     max-width: 100%;
     padding: 1em;
     height: 30em;
-    width: 25em;
+    width: 20em;
     border-radius: 20px;
     font: var(--font-size-1);
     font-weight: 600;
     color: var(--color-text);
+    position: relative;
 }
+
+#close-modal-button {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    inset-inline-start: 310px;
+    inset-block-start: 20px;
+    fill: var(--color-book-cover);
+}
+
+#close-modal-button:hover {
+    cursor: pointer;
+}
+
 input {
     padding: 0 1em;
     height: 2em;
@@ -99,7 +119,7 @@ input {
 }
 
 input::placeholder {
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .form-input {
@@ -108,15 +128,39 @@ input::placeholder {
     margin: 1em 0;
 }
 
+.checkbox-input {
+    display: flex;
+    align-items: center;
+}
+
 label {
     margin-bottom: 0.4em;
 }
 
 #modal-submit {
-    margin: 2em;
+    
     align-items: center;
-
+    font: var(--font-size-1);
+    background-color: var(--color-book-cover);
+    color: var(--color-book-page);
+    border: 0;
+    width: 8em;
+    height: 3em;
+    margin: 2em;
+    align-self: center;
+    border-radius: 5px;
 }
+
+#modal-submit:hover {
+    cursor: pointer;
+    background-color: var(--color-book-cover-hover);
+}
+
+#modal-submit:active {
+    transform: translateY(2px);
+}
+
+
 
 /* GRID */
 
@@ -178,6 +222,8 @@ label {
     font: var(--font-size-1);
     font-size: 1.5em;
     text-align: center;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 
@@ -187,7 +233,7 @@ label {
     transform: rotateY(180deg);
     border: 0.5em solid var(--color-book-page);
     outline: 1em solid var(--color-book-page);
-    
+
 }
 
 .book-author {
@@ -196,7 +242,30 @@ label {
     text-align: center;
 }
 
+#delete-book {
+    align-items: center;
+    font: var(--font-size-2);
+    background-color: var(--color-book-cover);
+    color: var(--color-book-page);
+    border: 0;
+    width: 8em;
+    height: 2em;
+    margin: 2em;
+    align-self: center;
+    border-radius: 5px;
+}
 
+
+
+
+#delete-book:hover {
+    cursor: pointer;
+    background-color: var(--color-book-cover-hover);
+}
+
+#delete-book:active {
+    transform: translateY(2px);
+}
 
 
 
