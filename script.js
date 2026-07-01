@@ -1,12 +1,70 @@
 const myLibrary = [];
 
-function Book(author, title, pages, read, id) {
-    this.author = author;
-    this.title = title;
-    this.pages = pages;
-    this.read = read;
-    this.id = id;
+class Book {
+
+    #author;
+    #title;
+    #pages;
+    #read;
+    #id;
+    constructor(author, title, pages, read, id) {
+        this.author = author;
+        this.title = title;
+        this.pages = pages;
+        this.read = read;
+        this.id = id;
+    }
+
+    set author(newAuthor) {
+        this.#author = newAuthor;
+    }
+    get author() {
+        return this.#author
+    }
+
+
+    set title(newTitle) {
+        this.#title = newTitle;
+    }
+    get title() {
+        return this.#title
+    }
+
+
+    set pages(newPages) {
+        this.#pages = newPages;
+    }
+    get pages() {
+        return this.#pages
+    }
+
+
+    set read(newRead) {
+        this.#read = newRead;
+    }
+    get read() {
+        return this.#read
+    }
+
+
+    set id(newId) {
+        this.#id = newId;
+    }
+
+    get id() {
+        return this.#id
+    }
 }
+
+
+
+// function Book(author, title, pages, read, id) {
+//     this.author = author;
+//     this.title = title;
+//     this.pages = pages;
+//     this.read = read;
+//     this.id = id;
+// }
 
 
 const open = document.querySelector("#open");
